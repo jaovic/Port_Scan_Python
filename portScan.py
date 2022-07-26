@@ -10,7 +10,7 @@ except exception as err:
 try:
     c = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     c.settimeout(0.6)
-    code = s.connect_ex((IP, port))
+    code = c.connect_ex((IP, PORT))
 
     if code == 0:
         print(f'Port {PORT} -> OPEN')
